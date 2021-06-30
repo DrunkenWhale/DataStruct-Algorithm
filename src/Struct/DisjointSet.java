@@ -1,4 +1,4 @@
-package Struct.Graph;
+package Struct;
 
 /**
  *  A elegant and simple ,interesting DataStruct

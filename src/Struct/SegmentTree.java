@@ -1,4 +1,4 @@
-package Struct.Graph;
+package Struct;
 /** 线段树 **/
 public class SegmentTree{
 
