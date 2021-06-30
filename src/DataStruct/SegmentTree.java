@@ -1,4 +1,4 @@
-package Struct;
+package DataStruct;
 /** 线段树 **/
 public class SegmentTree{
 

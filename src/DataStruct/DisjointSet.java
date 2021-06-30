@@ -1,4 +1,4 @@
-package Struct;
+package DataStruct;
 
 /**
  *  A elegant and simple ,interesting DataStruct
