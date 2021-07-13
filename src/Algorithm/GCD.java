@@ -1,13 +1,12 @@
 package Algorithm;
 
-import java.util.Arrays;
-import java.util.Scanner;
+
+import DataStruct.Heap.MaxBinaryHeap;
 
 /** gcd -> Greatest Common Divisor
  *  求最大公倍数
  *  不查错 所以全靠用户啦
  */
-
 public class GCD {
     /* 递归好写 就用递归啦 (✺ω✺)*/
 

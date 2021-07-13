@@ -1,4 +1,4 @@
-package DataStruct;
+package DataStruct.Tree;
 /** 树状数组 **/
 public class BinaryIndexedTree {
     private int[] arr       = null;
