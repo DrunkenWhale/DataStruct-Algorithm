@@ -29,21 +29,23 @@ public class NodeList<T> implements LinearList<T> {
             back.last.next = back;
             back = back.last;
         }
+        ++ this.size;
     }
 
     @Override
     public T pop() {
-        if (this.size<1) {
-            Node<T> temp = head;
+        T temp;
+        if (this.size>1) {
+            temp = head.value;
             head = head.last;
             head.next = null;
-            return temp.value;
         }else {
-            T temp = this.back.value;
+            temp = this.back.value;
             this.head = null;
             this.back = null;
-            return temp;
         }
+        -- this.size;
+        return temp;
     }
 
     @Override
