@@ -1,4 +1,4 @@
-package DataStruct.Heap;
+package DataStruct.heap;
 
 public class MaxBinaryHeap extends BinaryHeap{
 

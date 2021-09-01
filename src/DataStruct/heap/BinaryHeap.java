@@ -1,4 +1,4 @@
-package DataStruct.Heap;
+package DataStruct.heap;
 /** 二叉堆/优先队列 */
 public abstract class BinaryHeap {
 

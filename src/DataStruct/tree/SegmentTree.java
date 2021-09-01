@@ -1,13 +1,6 @@
-package DataStruct.Tree;
+package DataStruct.tree;
 /** 线段树 **/
 public class SegmentTree{
-
-    public static void main(String[] args) {
-        int[] arr = new int[]{0,1,2,3,4,5,6,7,8,9,10};
-        SegmentTree tree = new SegmentTree(arr,10);
-        tree.update(1,5,1,10,1,7777777);
-        System.out.println(tree.getSum(3,7,1,10,1));
-    }
 
     private int[] arr = null;
     private int[] lazyMark = null;

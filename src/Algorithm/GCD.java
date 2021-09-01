@@ -1,8 +1,6 @@
 package Algorithm;
 
 
-import DataStruct.Heap.MaxBinaryHeap;
-
 /** gcd -> Greatest Common Divisor
  *  求最大公倍数
  *  不查错 所以全靠用户啦
