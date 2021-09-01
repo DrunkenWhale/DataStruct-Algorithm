@@ -2,11 +2,27 @@ package DataStruct.linear.list;
 
 import DataStruct.linear.LinearList;
 
-public class NodeList<T> implements LinearList<T> {
+public class List<T> implements LinearList<T> {
 
     private Node<T> head = null;
     private Node<T> back = null;
     private int     size = 0;
+
+    public T back(){
+        if (this.size>0) {
+            return this.back.value;
+        }else {
+            return null;
+        }
+    }
+
+    public T front(){
+        if (this.size>0) {
+            return this.head.value;
+        }else {
+            return null;
+        }
+    }
 
     @Override
     public int getSize() {
@@ -60,14 +76,3 @@ public class NodeList<T> implements LinearList<T> {
 }
 
 
-class Node<T>{
-
-    public T value;
-    public Node<T> next = null;
-    public Node<T> last = null;
-
-    public Node(T value){
-        this.value = value;
-    }
-
-}
