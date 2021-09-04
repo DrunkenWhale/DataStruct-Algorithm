@@ -1,4 +1,4 @@
-package Algorithm;
+package Algorithm.pow;
 
 public class MatrixQuickPow {
 
