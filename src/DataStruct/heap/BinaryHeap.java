@@ -54,9 +54,9 @@ public abstract class BinaryHeap {
 
     private void swap(int a,int b){
         /* a,b代表数组的两个下标 */
-        int temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
+        arr[a] ^= arr[b];
+        arr[b] ^= arr[a];
+        arr[a] ^= arr[b];
     }
 
     private void swim(){
