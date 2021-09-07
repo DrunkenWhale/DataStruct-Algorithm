@@ -1,6 +1,6 @@
 package DataStruct.heap;
 /** 二叉堆/优先队列 */
-public abstract class BinaryHeap {
+public abstract class BinaryHeap implements Heap {
 
     private int MaxSize = 0;
     /* 用数组来储存一棵完全二叉树 */
@@ -21,6 +21,7 @@ public abstract class BinaryHeap {
     /** 将父节点与子节点的大小进行比较(x是父节点,y是子节点) 若x>y为false->大根堆 若x<y为true->小根堆 */
     public abstract boolean compare(int x,int y);
 
+    @Override
     public void push(int x) throws Exception {
         if (this.isFull()){
             throw new Exception(" 堆空间不足~ ");
@@ -30,6 +31,7 @@ public abstract class BinaryHeap {
         swim();
     }
 
+    @Override
     public int pop() throws Exception{
         if (this.isEmpty()){
             throw new Exception(" 堆是空哒~ ");
@@ -40,6 +42,7 @@ public abstract class BinaryHeap {
         return ans;
     }
 
+    @Override
     public int top(){
         return this.arr[1];
     }

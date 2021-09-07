@@ -1,6 +1,6 @@
 package DataStruct.heap;
 
-public class MaxBinaryHeap extends BinaryHeap{
+public class MaxBinaryHeap extends BinaryHeap {
 
     public MaxBinaryHeap(int n) {
         super(n);
@@ -10,4 +10,5 @@ public class MaxBinaryHeap extends BinaryHeap{
     public boolean compare(int x, int y) {
         return x >= y;
     }
+
 }
