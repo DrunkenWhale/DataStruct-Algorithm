@@ -10,7 +10,7 @@ public class ChainForwardStar {
 
     public Edge[] edges;  // 储存图的边
     public int[]  heads;  // 举个栗子 heads[i] 储存的是以这个节点作为起点的边中序号最大的那个边在edges数组的下标
-    public int index;     // 当前edge数组下标
+    public int index = 1;     // 当前edge数组下标
     public int edgeNumber;   // 边的个数 即数组的大小
     public int nodeNumber;
     /**
@@ -25,17 +25,27 @@ public class ChainForwardStar {
     }
 
     public void addEdge(int start,int end,int weightValue){  // 存图
-        edges[++ index].to = end;
-        edges[index].weightValue = weightValue;
-        edges[index].next = heads[start];
-        heads[start] = index;
+        edges[index] = new Edge(end,heads[start],weightValue);
+        heads[start] = index ++;
     }
 
-
+    public void showEdges(){
+        for (int i=1;i<=nodeNumber;++i){
+            for (int j=heads[i];j>0;j=edges[j].next){
+                System.out.printf("from: %5d to: %5d weight:%5d\n",i,edges[j].to,edges[j].weightValue);
+            }
+        }
+    }
 }
 
 class Edge{                     // 有向图中的边
     public int to    ;          // 这条边的终点
     public int next  ;          // 跟这条边相同起点的下一条边 在数组中的下标
     public int weightValue;     // 这条边的权值
+
+    public Edge(int to,int next,int weightValue){
+        this.to = to;
+        this.next = next;
+        this.weightValue = weightValue;
+    }
 }
