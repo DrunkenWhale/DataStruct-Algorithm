@@ -30,7 +30,10 @@ public class DisjointSet {
         }
     }
 
-    /** Find methods can return params' ancient node
+    /**
+     * Find methods can return params' ancient node
+     * @param params node's index, this function will make path compression when you find node's ancient
+     *
      * */
     public int find(int params){
         while (params!=node[params]){
