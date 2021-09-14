@@ -1,4 +1,4 @@
-package DataStruct.graph;
+package DataStruct.graph.ChainForwardStar;
 
 
 /**
@@ -10,14 +10,14 @@ public class ChainForwardStar {
 
     public Edge[] edges;  // 储存图的边
     public int[]  heads;  // 举个栗子 heads[i] 储存的是以这个节点作为起点的边中序号最大的那个边在edges数组的下标
-    public int index = 1;     // 当前edge数组下标
-    public int edgeNumber;   // 边的个数 即数组的大小
-    public int nodeNumber;
+    private int index = 1;     // 当前edge数组下标
+    private final int edgeNumber;   // 边的个数 即数组的大小
+    private final int nodeNumber;
     /**
      * @param edgeNumber 图的边的数量
      * @param nodeNumber 图的节点的数量
      * */
-    public ChainForwardStar(int edgeNumber,int nodeNumber){
+    public ChainForwardStar(int nodeNumber,int edgeNumber){
         this.edgeNumber = edgeNumber;
         this.nodeNumber = nodeNumber;
         this.edges  = new Edge[edgeNumber+1];
@@ -36,16 +36,15 @@ public class ChainForwardStar {
             }
         }
     }
-}
 
-class Edge{                     // 有向图中的边
-    public int to    ;          // 这条边的终点
-    public int next  ;          // 跟这条边相同起点的下一条边 在数组中的下标
-    public int weightValue;     // 这条边的权值
-
-    public Edge(int to,int next,int weightValue){
-        this.to = to;
-        this.next = next;
-        this.weightValue = weightValue;
+    public int getEdgeNumber() {
+        return edgeNumber;
     }
+
+    public int getNodeNumber() {
+        return nodeNumber;
+    }
+
 }
+
+

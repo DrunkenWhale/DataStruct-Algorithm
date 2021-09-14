@@ -1,5 +1,7 @@
 package DataStruct.tree;
-/** 线段树 **/
+/**
+ *  线段树
+ *  **/
 public class SegmentTree{
 
     private int[] arr = null;
