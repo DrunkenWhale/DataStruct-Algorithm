@@ -14,8 +14,8 @@ public class Dijkstra {
      * @param start 路径起点
      * @param chainForwardStar 已经建好的链式向前星
      * */
-    public static int[] init(int start, ChainForwardStar chainForwardStar){
-        PriorityQueue<Pair<Integer,Integer>> priorityQueue = new PriorityQueue<>(  // 距离短的
+    public static long[] init(int start, ChainForwardStar chainForwardStar){
+        PriorityQueue<Pair<Long,Integer>> priorityQueue = new PriorityQueue<>(  // 距离短的
                 (x,y)-> {
             if (x.first.equals(y.first)){
                 return 0;
@@ -26,11 +26,11 @@ public class Dijkstra {
             }
         });
         boolean[] mark = new boolean[chainForwardStar.getNodeNumber()+1];
-        int[] distance = new int[chainForwardStar.getNodeNumber()+1];
+        long[] distance = new long[chainForwardStar.getNodeNumber()+1];
         // 最大值
-        Arrays.fill(distance, 0x7fffffff-114514);
+        Arrays.fill(distance, 0x7fffffff);
         distance[start] = 0;
-        priorityQueue.add(new Pair<>(0,start));   // 起始点和自身的距离是0
+        priorityQueue.add(new Pair<>(0L,start));   // 压进去的是(到起点的距离和当前节点的编号) 起始点和自身的距离是0
         while (!priorityQueue.isEmpty()){
             int temp = priorityQueue.peek().second;
             priorityQueue.poll();
