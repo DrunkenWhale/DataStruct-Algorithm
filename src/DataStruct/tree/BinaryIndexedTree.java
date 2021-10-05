@@ -1,6 +1,6 @@
 package DataStruct.tree;
 /** 树状数组 **/
-public class BinaryIndexedTree {
+public class    BinaryIndexedTree {
     private int[] arr       = null;
     private int[] treeArray = null;
     private int   arrayBound= 0;
