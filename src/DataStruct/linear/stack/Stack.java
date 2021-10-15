@@ -8,15 +8,17 @@ public class Stack<T> implements LinearList<T> {
     private int size;
     private Node<T> head;
 
-    public Stack(){}
+    public Stack() {
+    }
 
-    public T top(){
-        if (this.size!=0) {
+    public T top() {
+        if (this.size != 0) {
             return this.head.value;
-        }else {
+        } else {
             return null;
         }
     }
+
     @Override
     public int getSize() {
         return this.size;
@@ -29,27 +31,27 @@ public class Stack<T> implements LinearList<T> {
 
     @Override
     public void push(T element) {
-        if (head == null){
+        if (head == null) {
             head = new Node<>(element);
         } else {
             head.next = new Node<>(element);
             head.next.last = head;
             head = head.next;
         }
-        ++ this.size;
+        ++this.size;
     }
 
     @Override
     public T pop() {
-        if (this.size>0){
+        if (this.size > 0) {
             T temp = head.value;
             head = head.last;
-            if (head!=null) {
+            if (head != null) {
                 head.next = null;
             }
-            -- this.size;
+            --this.size;
             return temp;
-        }else {
+        } else {
             return null;
         }
     }
@@ -57,8 +59,8 @@ public class Stack<T> implements LinearList<T> {
     @Override
     public void show() {
         Node<T> temp = head;
-        while (temp!=null){
-            System.out.print(temp.value+" ");
+        while (temp != null) {
+            System.out.print(temp.value + " ");
             temp = temp.last;
         }
         System.out.println();

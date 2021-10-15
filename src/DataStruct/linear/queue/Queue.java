@@ -8,7 +8,7 @@ public class Queue<T> implements LinearList<T> {
     private int size = 0;
     private final List<T> list;
 
-    public Queue(){
+    public Queue() {
         list = new List<>();
     }
 
@@ -25,12 +25,12 @@ public class Queue<T> implements LinearList<T> {
     @Override
     public void push(T element) {
         list.push(element);
-        ++ this.size;
+        ++this.size;
     }
 
     @Override
     public T pop() {
-        -- this.size;
+        --this.size;
         return list.pop();
     }
 
